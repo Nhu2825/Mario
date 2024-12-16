@@ -112,7 +112,6 @@
             // 
             // pictureBox34
             // 
-            this.pictureBox34.Image = global::Mario.Properties.Resources.Nội_dung_đoạn_văn_bản_của_bạn;
             this.pictureBox34.Location = new System.Drawing.Point(1792, 344);
             this.pictureBox34.Name = "pictureBox34";
             this.pictureBox34.Size = new System.Drawing.Size(53, 50);
@@ -129,7 +128,6 @@
             // 
             // pictureBox33
             // 
-            this.pictureBox33.Image = global::Mario.Properties.Resources.Nội_dung_đoạn_văn_bản_của_bạn;
             this.pictureBox33.Location = new System.Drawing.Point(966, 353);
             this.pictureBox33.Name = "pictureBox33";
             this.pictureBox33.Size = new System.Drawing.Size(53, 50);
