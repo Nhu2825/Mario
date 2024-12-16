@@ -31,5 +31,25 @@ namespace Mario
         {
 
         }
+
+        private void Map1TimerEvent(object sender, EventArgs e)
+        {
+
+        }
+
+        private void KeyisDown(object sender, KeyEventArgs e)
+        {
+            
+        }
+
+        private void KeyisUp(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void CloseMap1(object sender, FormClosedEventArgs e)
+        {
+
+        }
     }
 }

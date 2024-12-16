@@ -18,7 +18,7 @@ namespace Mario
         }
         private void begin_Paint(object sender, PaintEventArgs e)
         {
-            e.Graphics.DrawImage(Properties.Resources.gogreen, 0, 0);
+            e.Graphics.DrawImage(Properties.Resources.nen, 0, 0);
         }
 
        
