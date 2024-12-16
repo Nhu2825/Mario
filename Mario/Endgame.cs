@@ -10,24 +10,24 @@ using System.Windows.Forms;
 
 namespace Mario
 {
-    public partial class Map2 : Form
+    public partial class Endgame : Form
     {
-        public Map2()
+        public Endgame()
         {
             InitializeComponent();
         }
 
-        private void KeyisUp(object sender, KeyEventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void KeyisDown(object sender, KeyEventArgs e)
+        private void label1_Click_1(object sender, EventArgs e)
         {
 
         }
 
-        private void CloseMap2(object sender, FormClosedEventArgs e)
+        private void Rankings(object sender, EventArgs e)
         {
 
         }

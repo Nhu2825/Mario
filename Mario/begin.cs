@@ -21,6 +21,9 @@ namespace Mario
             e.Graphics.DrawImage(Properties.Resources.nen, 0, 0);
         }
 
-       
+        private void EnterName(object sender, EventArgs e)
+        {
+
+        }
     }
 }

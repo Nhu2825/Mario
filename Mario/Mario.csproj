@@ -52,6 +52,12 @@
     <Compile Include="begin.Designer.cs">
       <DependentUpon>begin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Endgame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Endgame.Designer.cs">
+      <DependentUpon>Endgame.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +74,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="begin.resx">
       <DependentUpon>begin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Endgame.resx">
+      <DependentUpon>Endgame.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -169,6 +178,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\nen.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\life.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\startt.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

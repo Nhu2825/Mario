@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Map2));
             this.coinCount = new System.Windows.Forms.Label();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.Player = new System.Windows.Forms.PictureBox();
             this.pictureBox33 = new System.Windows.Forms.PictureBox();
             this.pictureBox34 = new System.Windows.Forms.PictureBox();
@@ -66,6 +67,9 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox35 = new System.Windows.Forms.PictureBox();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Player)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox33)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox34)).BeginInit();
@@ -102,6 +106,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox35)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             this.SuspendLayout();
             // 
             // coinCount
@@ -113,6 +119,17 @@
             this.coinCount.Size = new System.Drawing.Size(82, 29);
             this.coinCount.TabIndex = 6;
             this.coinCount.Text = "Coin: 0";
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox10.Image = global::Mario.Properties.Resources.life;
+            this.pictureBox10.Location = new System.Drawing.Point(177, 21);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(29, 29);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox10.TabIndex = 8;
+            this.pictureBox10.TabStop = false;
             // 
             // Player
             // 
@@ -484,11 +501,36 @@
             this.pictureBox35.TabIndex = 7;
             this.pictureBox35.TabStop = false;
             // 
+            // pictureBox11
+            // 
+            this.pictureBox11.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox11.Image = global::Mario.Properties.Resources.life;
+            this.pictureBox11.Location = new System.Drawing.Point(209, 21);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(29, 29);
+            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox11.TabIndex = 8;
+            this.pictureBox11.TabStop = false;
+            // 
+            // pictureBox12
+            // 
+            this.pictureBox12.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox12.Image = global::Mario.Properties.Resources.life;
+            this.pictureBox12.Location = new System.Drawing.Point(244, 21);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(29, 29);
+            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox12.TabIndex = 8;
+            this.pictureBox12.TabStop = false;
+            // 
             // Map2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1924, 453);
+            this.Controls.Add(this.pictureBox12);
+            this.Controls.Add(this.pictureBox11);
+            this.Controls.Add(this.pictureBox10);
             this.Controls.Add(this.Player);
             this.Controls.Add(this.coinCount);
             this.Controls.Add(this.pictureBox33);
@@ -527,6 +569,10 @@
             this.Controls.Add(this.pictureBox1);
             this.Name = "Map2";
             this.Text = "Map2";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.CloseMap2);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyisUp);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.KeyisDown);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Player)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox33)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox34)).EndInit();
@@ -563,6 +609,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox35)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -607,5 +655,8 @@
         private System.Windows.Forms.Label coinCount;
         private System.Windows.Forms.PictureBox pictureBox35;
         private System.Windows.Forms.PictureBox Player;
+        private System.Windows.Forms.PictureBox pictureBox10;
+        private System.Windows.Forms.PictureBox pictureBox11;
+        private System.Windows.Forms.PictureBox pictureBox12;
     }
 }

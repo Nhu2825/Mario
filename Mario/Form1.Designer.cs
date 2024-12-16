@@ -30,6 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            this.Map1Timer = new System.Windows.Forms.Timer(this.components);
+            this.pictureBox35 = new System.Windows.Forms.PictureBox();
             this.key3 = new System.Windows.Forms.PictureBox();
             this.key2 = new System.Windows.Forms.PictureBox();
             this.key1 = new System.Windows.Forms.PictureBox();
@@ -65,8 +67,11 @@
             this.pictureBox30 = new System.Windows.Forms.PictureBox();
             this.pictureBox31 = new System.Windows.Forms.PictureBox();
             this.background = new System.Windows.Forms.PictureBox();
-            this.pictureBox35 = new System.Windows.Forms.PictureBox();
-            this.Map1Timer = new System.Windows.Forms.Timer(this.components);
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox32 = new System.Windows.Forms.PictureBox();
+            this.pictureBox33 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox35)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.key3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.key2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.key1)).BeginInit();
@@ -102,8 +107,26 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox30)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox31)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.background)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox35)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox32)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox33)).BeginInit();
             this.SuspendLayout();
+            // 
+            // Map1Timer
+            // 
+            this.Map1Timer.Enabled = true;
+            this.Map1Timer.Interval = 20;
+            this.Map1Timer.Tick += new System.EventHandler(this.Map1TimerEvent);
+            // 
+            // pictureBox35
+            // 
+            this.pictureBox35.Image = global::Mario.Properties.Resources.player;
+            this.pictureBox35.Location = new System.Drawing.Point(208, 371);
+            this.pictureBox35.Name = "pictureBox35";
+            this.pictureBox35.Size = new System.Drawing.Size(59, 85);
+            this.pictureBox35.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox35.TabIndex = 7;
+            this.pictureBox35.TabStop = false;
             // 
             // key3
             // 
@@ -451,21 +474,45 @@
             this.background.TabIndex = 0;
             this.background.TabStop = false;
             // 
-            // pictureBox35
+            // label1
             // 
-            this.pictureBox35.Image = global::Mario.Properties.Resources.player;
-            this.pictureBox35.Location = new System.Drawing.Point(208, 371);
-            this.pictureBox35.Name = "pictureBox35";
-            this.pictureBox35.Size = new System.Drawing.Size(59, 85);
-            this.pictureBox35.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox35.TabIndex = 7;
-            this.pictureBox35.TabStop = false;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(365, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(82, 29);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Coin: 0";
             // 
-            // Map1Timer
+            // pictureBox7
             // 
-            this.Map1Timer.Enabled = true;
-            this.Map1Timer.Interval = 20;
-            this.Map1Timer.Tick += new System.EventHandler(this.Map1TimerEvent);
+            this.pictureBox7.Image = global::Mario.Properties.Resources.life;
+            this.pictureBox7.Location = new System.Drawing.Point(572, 12);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(27, 29);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox7.TabIndex = 9;
+            this.pictureBox7.TabStop = false;
+            // 
+            // pictureBox32
+            // 
+            this.pictureBox32.Image = global::Mario.Properties.Resources.life;
+            this.pictureBox32.Location = new System.Drawing.Point(605, 12);
+            this.pictureBox32.Name = "pictureBox32";
+            this.pictureBox32.Size = new System.Drawing.Size(27, 29);
+            this.pictureBox32.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox32.TabIndex = 9;
+            this.pictureBox32.TabStop = false;
+            // 
+            // pictureBox33
+            // 
+            this.pictureBox33.Image = global::Mario.Properties.Resources.life;
+            this.pictureBox33.Location = new System.Drawing.Point(638, 12);
+            this.pictureBox33.Name = "pictureBox33";
+            this.pictureBox33.Size = new System.Drawing.Size(27, 29);
+            this.pictureBox33.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox33.TabIndex = 9;
+            this.pictureBox33.TabStop = false;
             // 
             // Form1
             // 
@@ -473,6 +520,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1894, 502);
+            this.Controls.Add(this.pictureBox33);
+            this.Controls.Add(this.pictureBox32);
+            this.Controls.Add(this.pictureBox7);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox35);
             this.Controls.Add(this.key3);
             this.Controls.Add(this.key2);
@@ -515,6 +566,7 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyisDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.KeyisUp);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox35)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.key3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.key2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.key1)).EndInit();
@@ -550,7 +602,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox30)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox31)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.background)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox35)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox32)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox33)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -595,6 +649,10 @@
         private System.Windows.Forms.PictureBox key3;
         private System.Windows.Forms.PictureBox pictureBox35;
         private System.Windows.Forms.Timer Map1Timer;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.PictureBox pictureBox32;
+        private System.Windows.Forms.PictureBox pictureBox33;
     }
 }
 

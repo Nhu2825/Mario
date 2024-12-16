@@ -193,6 +193,16 @@ namespace Mario.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap life {
+            get {
+                object obj = ResourceManager.GetObject("life", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap map1 {
             get {
                 object obj = ResourceManager.GetObject("map1", resourceCulture);
@@ -286,6 +296,16 @@ namespace Mario.Properties {
         internal static System.Drawing.Bitmap stand1 {
             get {
                 object obj = ResourceManager.GetObject("stand1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap startt {
+            get {
+                object obj = ResourceManager.GetObject("startt", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
