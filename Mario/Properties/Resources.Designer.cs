@@ -243,6 +243,16 @@ namespace Mario.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap nicecoin {
+            get {
+                object obj = ResourceManager.GetObject("nicecoin", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap platcloud {
             get {
                 object obj = ResourceManager.GetObject("platcloud", resourceCulture);

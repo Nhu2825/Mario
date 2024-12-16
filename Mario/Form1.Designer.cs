@@ -31,14 +31,17 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.Map1Timer = new System.Windows.Forms.Timer(this.components);
-            this.pictureBox35 = new System.Windows.Forms.PictureBox();
+            this.CoinCount = new System.Windows.Forms.Label();
+            this.pictureBox33 = new System.Windows.Forms.PictureBox();
+            this.pictureBox32 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.player = new System.Windows.Forms.PictureBox();
             this.key3 = new System.Windows.Forms.PictureBox();
             this.key2 = new System.Windows.Forms.PictureBox();
             this.key1 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox21 = new System.Windows.Forms.PictureBox();
             this.pictureBox20 = new System.Windows.Forms.PictureBox();
-            this.pictureBox23 = new System.Windows.Forms.PictureBox();
             this.pictureBox19 = new System.Windows.Forms.PictureBox();
             this.pictureBox18 = new System.Windows.Forms.PictureBox();
             this.pictureBox17 = new System.Windows.Forms.PictureBox();
@@ -67,18 +70,17 @@
             this.pictureBox30 = new System.Windows.Forms.PictureBox();
             this.pictureBox31 = new System.Windows.Forms.PictureBox();
             this.background = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox32 = new System.Windows.Forms.PictureBox();
-            this.pictureBox33 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox35)).BeginInit();
+            this.pictureBox23 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox33)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox32)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.player)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.key3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.key2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.key1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
@@ -107,9 +109,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox30)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox31)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.background)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox32)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox33)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).BeginInit();
             this.SuspendLayout();
             // 
             // Map1Timer
@@ -118,15 +118,56 @@
             this.Map1Timer.Interval = 20;
             this.Map1Timer.Tick += new System.EventHandler(this.Map1TimerEvent);
             // 
-            // pictureBox35
+            // CoinCount
             // 
-            this.pictureBox35.Image = global::Mario.Properties.Resources.player;
-            this.pictureBox35.Location = new System.Drawing.Point(208, 371);
-            this.pictureBox35.Name = "pictureBox35";
-            this.pictureBox35.Size = new System.Drawing.Size(59, 85);
-            this.pictureBox35.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox35.TabIndex = 7;
-            this.pictureBox35.TabStop = false;
+            this.CoinCount.AutoSize = true;
+            this.CoinCount.BackColor = System.Drawing.Color.Transparent;
+            this.CoinCount.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CoinCount.Location = new System.Drawing.Point(365, 9);
+            this.CoinCount.Name = "CoinCount";
+            this.CoinCount.Size = new System.Drawing.Size(82, 29);
+            this.CoinCount.TabIndex = 8;
+            this.CoinCount.Text = "Coin: 0";
+            // 
+            // pictureBox33
+            // 
+            this.pictureBox33.Image = global::Mario.Properties.Resources.life;
+            this.pictureBox33.Location = new System.Drawing.Point(638, 12);
+            this.pictureBox33.Name = "pictureBox33";
+            this.pictureBox33.Size = new System.Drawing.Size(27, 29);
+            this.pictureBox33.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox33.TabIndex = 9;
+            this.pictureBox33.TabStop = false;
+            // 
+            // pictureBox32
+            // 
+            this.pictureBox32.Image = global::Mario.Properties.Resources.life;
+            this.pictureBox32.Location = new System.Drawing.Point(605, 12);
+            this.pictureBox32.Name = "pictureBox32";
+            this.pictureBox32.Size = new System.Drawing.Size(27, 29);
+            this.pictureBox32.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox32.TabIndex = 9;
+            this.pictureBox32.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = global::Mario.Properties.Resources.life;
+            this.pictureBox7.Location = new System.Drawing.Point(572, 12);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(27, 29);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox7.TabIndex = 9;
+            this.pictureBox7.TabStop = false;
+            // 
+            // player
+            // 
+            this.player.Image = global::Mario.Properties.Resources.player;
+            this.player.Location = new System.Drawing.Point(208, 371);
+            this.player.Name = "player";
+            this.player.Size = new System.Drawing.Size(59, 85);
+            this.player.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.player.TabIndex = 7;
+            this.player.TabStop = false;
             // 
             // key3
             // 
@@ -186,16 +227,6 @@
             this.pictureBox20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox20.TabIndex = 5;
             this.pictureBox20.TabStop = false;
-            // 
-            // pictureBox23
-            // 
-            this.pictureBox23.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox23.Image")));
-            this.pictureBox23.Location = new System.Drawing.Point(415, 251);
-            this.pictureBox23.Name = "pictureBox23";
-            this.pictureBox23.Size = new System.Drawing.Size(46, 45);
-            this.pictureBox23.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox23.TabIndex = 5;
-            this.pictureBox23.TabStop = false;
             // 
             // pictureBox19
             // 
@@ -474,67 +505,37 @@
             this.background.TabIndex = 0;
             this.background.TabStop = false;
             // 
-            // label1
+            // pictureBox23
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(365, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(82, 29);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Coin: 0";
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = global::Mario.Properties.Resources.life;
-            this.pictureBox7.Location = new System.Drawing.Point(572, 12);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(27, 29);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox7.TabIndex = 9;
-            this.pictureBox7.TabStop = false;
-            // 
-            // pictureBox32
-            // 
-            this.pictureBox32.Image = global::Mario.Properties.Resources.life;
-            this.pictureBox32.Location = new System.Drawing.Point(605, 12);
-            this.pictureBox32.Name = "pictureBox32";
-            this.pictureBox32.Size = new System.Drawing.Size(27, 29);
-            this.pictureBox32.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox32.TabIndex = 9;
-            this.pictureBox32.TabStop = false;
-            // 
-            // pictureBox33
-            // 
-            this.pictureBox33.Image = global::Mario.Properties.Resources.life;
-            this.pictureBox33.Location = new System.Drawing.Point(638, 12);
-            this.pictureBox33.Name = "pictureBox33";
-            this.pictureBox33.Size = new System.Drawing.Size(27, 29);
-            this.pictureBox33.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox33.TabIndex = 9;
-            this.pictureBox33.TabStop = false;
+            this.pictureBox23.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox23.Image")));
+            this.pictureBox23.Location = new System.Drawing.Point(425, 251);
+            this.pictureBox23.Name = "pictureBox23";
+            this.pictureBox23.Size = new System.Drawing.Size(46, 45);
+            this.pictureBox23.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox23.TabIndex = 5;
+            this.pictureBox23.TabStop = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1894, 502);
+            this.ClientSize = new System.Drawing.Size(622, 502);
             this.Controls.Add(this.pictureBox33);
             this.Controls.Add(this.pictureBox32);
             this.Controls.Add(this.pictureBox7);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox35);
+            this.Controls.Add(this.CoinCount);
+            this.Controls.Add(this.player);
             this.Controls.Add(this.key3);
             this.Controls.Add(this.key2);
             this.Controls.Add(this.key1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox21);
             this.Controls.Add(this.pictureBox20);
-            this.Controls.Add(this.pictureBox23);
             this.Controls.Add(this.pictureBox19);
             this.Controls.Add(this.pictureBox18);
             this.Controls.Add(this.pictureBox17);
+            this.Controls.Add(this.pictureBox23);
             this.Controls.Add(this.pictureBox22);
             this.Controls.Add(this.pictureBox16);
             this.Controls.Add(this.pictureBox15);
@@ -566,14 +567,16 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyisDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.KeyisUp);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox35)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox33)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox32)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.player)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.key3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.key2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.key1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
@@ -602,9 +605,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox30)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox31)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.background)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox32)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox33)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -635,7 +636,6 @@
         private System.Windows.Forms.PictureBox pictureBox20;
         private System.Windows.Forms.PictureBox pictureBox21;
         private System.Windows.Forms.PictureBox pictureBox22;
-        private System.Windows.Forms.PictureBox pictureBox23;
         private System.Windows.Forms.PictureBox pictureBox24;
         private System.Windows.Forms.PictureBox pictureBox25;
         private System.Windows.Forms.PictureBox pictureBox26;
@@ -647,12 +647,13 @@
         private System.Windows.Forms.PictureBox key1;
         private System.Windows.Forms.PictureBox key2;
         private System.Windows.Forms.PictureBox key3;
-        private System.Windows.Forms.PictureBox pictureBox35;
+        private System.Windows.Forms.PictureBox player;
         private System.Windows.Forms.Timer Map1Timer;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label CoinCount;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.PictureBox pictureBox32;
         private System.Windows.Forms.PictureBox pictureBox33;
+        private System.Windows.Forms.PictureBox pictureBox23;
     }
 }
 
